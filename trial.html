@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/378a7ca952.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/output.css">
+    <style>
+        .animate {
+            transition: 1s;
+            animation-name: animation;
+            animation-duration: 2s;
+            animation-delay: 0.5s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes animation {
+            0% {
+                -webkit-transform: translateY(0px);
+            }
+
+            50% {
+                -webkit-transform: translateY(8px);
+            }
+
+            100% {
+                -webkit-transform: translateY(0px);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animate flex w-full h-screen justify-center items-center">
+        <img src="./img/bika pic 2.png" alt="">
+    </div>
+    <div class=" flex w-fit bg-slate-500 rounded-lg h-20 mb-20 items-center">
+        <input type="text" class=" bg-white px-8 h-12 rounded-lg outline-none" placeholder="bikas close to you..."
+            id="input">
+        <i class="fa-solid fa-arrow-right text-2xl px-4 py-1 rounded-lg  text-white bg-[#9A20D3]" id="btn"></i>
+    </div>
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", function () {
+        var sth = document.getElementById("input");
+        if (sth.value == "") {
+            alert("Please enter a text")
+        }
+        else {
+            alert("success")
+        }
+    })
+</script>
+
+</html>
